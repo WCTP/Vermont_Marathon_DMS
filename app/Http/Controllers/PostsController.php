@@ -51,7 +51,7 @@ class PostsController extends Controller
         'sex' => 'required',
         'time_in' => 'required',
         'chief_complaint' => 'required',
-        'provider_name' => 'required',
+        'provider_name' => 'required'
       ]);
 
       auth()->user()->publish(
@@ -59,7 +59,8 @@ class PostsController extends Controller
           'last_name', 'age', 'sex', 'city', 'state', 'country', 'pt_info',
           'time_in', 'time_out', 'race_chip_collected', 'medal_given',
           'relevant_medical_history', 'allergies', 'current_meds', 'chief_complaint',
-          'vital_signs_1', 'vital_signs_2', 'vital_signs_3', 'treatment', 'diagnosis',
+          'vital_signs_1', 'vital_signs_2', 'vital_signs_3', 'vital_signs_4', 'vital_signs_5',
+          'treatment_1', 'treatment_2', 'treatment_3', 'treatment_4', 'treatment_5', 'diagnosis',
           'disposition', 'disposition_time', 'disposition_transportation',
           'family_notification', 'treatment_notes', 'provider_name',
           'provider_prefix', 'provider_signature'
@@ -94,16 +95,19 @@ class PostsController extends Controller
     public function update(Post $post, Request $request)
     {
       $this->validate(request(), [
-        'title' => 'required',
-        'body' => 'required'
+        'bib_number' => 'required',
+        'location' => 'required',
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'age' => 'required',
+        'sex' => 'required',
+        'time_in' => 'required',
+        'chief_complaint' => 'required',
+        'provider_name' => 'required'
       ]);
 
-      if (Auth::check()) {
-        $user = Auth::user();
-        if ($user == $post->user) {
-          $post->update($request->all());
-        }
-      }
+      $user = Auth::user();
+      $post->update($request->all());
 
       $posts = Post::latest()->where("posts.user_id", "=", $user->id)->get();
 

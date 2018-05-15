@@ -6,7 +6,7 @@
 
     <hr>
 
-    <form method="POST" action="/posts">
+    <form method="POST" action="/admin/update/{{ $post->id }}">
 
       {{ csrf_field() }}
 
@@ -26,7 +26,7 @@
             <label for="bib_number">BIB Number:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="bib_number" name="bib_number" size="9" maxlength="9" value="{{ old('bib_number')}}" required>
+            <input type="text" class="form-input" id="bib_number" name="bib_number" size="9" maxlength="9" value="{{ $post->bib_number }}" required>
           </div>
           <div class="col-1">
             <label for="location">Location:</label>
@@ -48,19 +48,19 @@
             <label for="first_name">First Name:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="first_name" name="first_name" size="15" maxlength="15" value="{{ old('first_name')}}" required>
+            <input type="text" class="form-input" id="first_name" name="first_name" size="15" maxlength="15" value="{{ $post->first_name }}" required>
           </div>
           <div class="col-2">
             <label for="middle_name">Middle Name:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="middle_name" name="middle_name" size="15" maxlength="15" value="{{ old('middle_name')}}">
+            <input type="text" class="form-input" id="middle_name" name="middle_name" size="15" maxlength="15" value="{{ $post->middle_name }}">
           </div>
           <div class="col-2">
             <label for="middle_name">Last Name:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="last_name" name="last_name" size="15" maxlength="15" value="{{ old('last_name')}}" required>
+            <input type="text" class="form-input" id="last_name" name="last_name" size="15" maxlength="15" value="{{ $post->last_name }}" required>
           </div>
         </div>
         <!-- /row -->
@@ -70,7 +70,7 @@
             <label for="age">Age:</label>
           </div>
           <div class="col-1">
-            <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ old('age')}}" required>
+            <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ $post->age }}" required>
           </div>
           <div class="col-1">
             <label for="sex">Sex:</label>
@@ -85,7 +85,7 @@
             <label for="city">City:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="city" name="city" size="15" value="{{ old('city')}}">
+            <input type="text" class="form-input" id="city" name="city" size="15" value="{{ $post->city }}">
           </div>
           <div class="col-1">
             <label for="state">State:</label>
@@ -149,7 +149,7 @@
             <label for="country">Country:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="country" name="country" size="15" value="{{ old('country')}}">
+            <input type="text" class="form-input" id="country" name="country" size="15" value="{{ $post->country }}">
           </div>
         </div>
         <!-- /row -->
@@ -159,7 +159,7 @@
             <label for="pt_info">Pt. Info:</label>
           </div>
           <div class="col-2">
-            <input list="info" name="pt_info" id="pt_info" class="form-input" size="15" value="{{ old('pt_info')}}">
+            <input list="info" name="pt_info" id="pt_info" class="form-input" size="15" value="{{ $post->pt_info }}">
             <datalist id="info">
               <option value="Marathon">
               <option value="Relay">
@@ -186,13 +186,13 @@
             <label for="time_in">Time In:</label>
           </div>
           <div class="col-1">
-            <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ old('time_in')}}" required>
+            <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ $post->time_in }}" required>
           </div>
           <div class="col-2">
             <label for="time_out">Time Out:</label>
           </div>
           <div class="col-1">
-            <input type="time" class="form-input" id="time_out" name="time_out" size="7" maxlength="7" value="{{ old('time_out')}}">
+            <input type="time" class="form-input" id="time_out" name="time_out" size="7" maxlength="7" value="{{ $post->time_out }}">
           </div>
         </div>
         <!-- /row -->
@@ -204,7 +204,7 @@
             <label for="relevant_medical_history">Relevant Medical History:</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-input" id="relevant_medical_history" name="relevant_medical_history" size="80" value="{{ old('relevant_medical_history')}}">
+            <input type="text" class="form-input" id="relevant_medical_history" name="relevant_medical_history" size="80" value="{{ $post->relevant_medical_history }}">
           </div>
         </div>
         <!-- /row -->
@@ -214,13 +214,13 @@
             <label for="allergies">Allergies:</label>
           </div>
           <div class="col-5">
-            <input type="text" class="form-input" id="allergies" name="allergies" size="50" value="{{ old('allergies')}}">
+            <input type="text" class="form-input" id="allergies" name="allergies" size="50" value="{{ $post->allergies }}">
           </div>
           <div class="col-2">
             <label for="current_meds">Current Meds:</label>
           </div>
           <div class="col-4">
-            <input type="text" class="form-input" id="current_meds" name="current_meds" size="35" value="{{ old('current_meds')}}">
+            <input type="text" class="form-input" id="current_meds" name="current_meds" size="35" value="{{ $post->current_meds }}">
           </div>
         </div>
         <!-- /row -->
@@ -240,8 +240,8 @@
           <div class="col-2">
             <label for="chief_complaint">Chief Complaint:</label>
           </div>
-          <div class="col-2">
-            <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="15" value="{{ old('chief_complaint')}}" required>
+          <div class="col-10">
+            <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ $post->chief_complaint }}" required>
             <datalist id="complaint-info">
               <option value="Fatigue">
               <option value="Chills">
@@ -295,11 +295,20 @@
         <hr>
 
         <div class="row">
+          <div class="col-12">
+            TEMPLATE: 00:00 AM | BP 00 | P 00 | RR 00 | Skin 00 | I-stat 00 | Glucose 00 | 02 Sat 00 | Other
+          </div>
+        </div>
+        <!-- /row -->
+
+        <hr>
+
+        <div class="row">
           <div class="col-3">
             <label for="vital_signs_1">Test 1:</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-input" id="vital_signs_1" name="vital_signs_1" size="80" value="{{ old('vital_signs_1')}}">
+            <input type="text" class="form-input" id="vital_signs_1" name="vital_signs_1" size="80" value="{{ $post->vital_signs_1 }}">
           </div>
         </div>
         <!-- /row -->
@@ -309,17 +318,37 @@
             <label for="vital_signs_2">Test 2:</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-input" id="vital_signs_2" name="vital_signs_2" size="80" value="{{ old('vital_signs_2')}}">
+            <input type="text" class="form-input" id="vital_signs_2" name="vital_signs_2" size="80" value="{{ $post->vital_signs_2 }}">
           </div>
         </div>
         <!-- /row -->
 
         <div class="row">
           <div class="col-3">
-            <label for="vital_signs_1">Test 3:</label>
+            <label for="vital_signs_3">Test 3:</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-input" id="vital_signs_3" name="vital_signs_3" size="80" value="{{ old('vital_signs_3')}}">
+            <input type="text" class="form-input" id="vital_signs_3" name="vital_signs_3" size="80" value="{{ $post->vital_signs_3 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="vital_signs_4">Test 4:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="vital_signs_4" name="vital_signs_4" size="80" value="{{ $post->vital_signs_4 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="vital_signs_5">Test 5:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="vital_signs_5" name="vital_signs_5" size="80" value="{{ $post->vital_signs_5 }}">
           </div>
         </div>
         <!-- /row -->
@@ -336,21 +365,72 @@
         <hr>
 
         <div class="row">
-          <div class="col-3">
-            <label for="treatment">Treatment:</label>
-          </div>
-          <div class="col-9">
-            <input type="text" class="form-input" id="treatment" name="treatment" size="80" value="{{ old('treatment')}}">
+          <div class="col-12">
+            TEMPLATE: IV 00 liters | 00:00 AM | IV_Solution | Volume 00
           </div>
         </div>
         <!-- /row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_1">Treatment 1:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_1" name="treatment_1" size="80" value="{{ $post->treatment_1 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_2">Treatment 2:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_2" name="treatment_2" size="80" value="{{ $post->treatment_2 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_3">Treatment 3:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_3" name="treatment_3" size="80" value="{{ $post->treatment_3 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_4">Treatment 4:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_4" name="treatment_4" size="80" value="{{ $post->treatment_4 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_5">Treatment 5:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_5" name="treatment_5" size="80" value="{{ $post->treatment_5 }}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <hr>
 
         <div class="row">
           <div class="col-1">
             <label for="diagnosis">Diagnosis:</label>
           </div>
           <div class="col-2">
-            <input list="diagnosis-info" name="diagnosis" id="diagnosis" class="form-input" size="15" value="{{ old('diagnosis')}}">
+            <input list="diagnosis-info" name="diagnosis" id="diagnosis" class="form-input" size="15" value="{{ $post->diagnosis }}">
             <datalist id="diagnosis-info">
               <option value="Dehydration">
               <option value="Hyperthermia">
@@ -377,7 +457,7 @@
             <label for="disposition_time">Time:</label>
           </div>
           <div class="col-1">
-            <input type="time" class="form-input" id="disposition_time" name="disposition_time" size="7" maxlength="7" value="{{ old('disposition_time')}}">
+            <input type="time" class="form-input" id="disposition_time" name="disposition_time" size="7" maxlength="7" value="{{ $post->disposition_time }}">
           </div>
         </div>
         <!-- /row -->
@@ -387,7 +467,7 @@
             <label for="disposition_transportation">Transported By:</label>
           </div>
           <div class="col-5">
-            <input type="text" class="form-input" id="disposition_transportation" name="disposition_transportation" size="50" value="{{ old('disposition_transportation')}}">
+            <input type="text" class="form-input" id="disposition_transportation" name="disposition_transportation" size="50" value="{{ $post->disposition_transportation }}">
           </div>
           <div class="col-3">
             <label for="family_notification">Family Notification:</label>
@@ -403,7 +483,7 @@
             <label for="treatment_notes">Treatment Notes:</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-input" id="treatment_notes" name="treatment_notes" size="80" value="{{ old('treatment_notes')}}">
+            <input type="text" class="form-input" id="treatment_notes" name="treatment_notes" size="80" value="{{ $post->treatment_notes }}">
           </div>
         </div>
         <!-- /row -->
@@ -424,7 +504,7 @@
             <label for="provider_name">Name:</label>
           </div>
           <div class="col-2">
-            <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ old('provider_name')}}" required>
+            <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ $post->provider_name }}" required>
           </div>
           <div class="col-1">
             <label for="provider_prefix">Prefix:</label>

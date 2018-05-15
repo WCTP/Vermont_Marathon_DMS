@@ -240,8 +240,8 @@
           <div class="col-2">
             <label for="chief_complaint">Chief Complaint:</label>
           </div>
-          <div class="col-2">
-            <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="15" value="{{ old('chief_complaint')}}" required>
+          <div class="col-10">
+            <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ old('chief_complaint')}}" required>
             <datalist id="complaint-info">
               <option value="Fatigue">
               <option value="Chills">
@@ -295,6 +295,15 @@
         <hr>
 
         <div class="row">
+          <div class="col-12">
+            TEMPLATE: 00:00 AM | BP 00 | P 00 | RR 00 | Skin 00 | I-stat 00 | Glucose 00 | 02 Sat 00 | Other
+          </div>
+        </div>
+        <!-- /row -->
+
+        <hr>
+
+        <div class="row">
           <div class="col-3">
             <label for="vital_signs_1">Test 1:</label>
           </div>
@@ -316,10 +325,30 @@
 
         <div class="row">
           <div class="col-3">
-            <label for="vital_signs_1">Test 3:</label>
+            <label for="vital_signs_3">Test 3:</label>
           </div>
           <div class="col-9">
             <input type="text" class="form-input" id="vital_signs_3" name="vital_signs_3" size="80" value="{{ old('vital_signs_3')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="vital_signs_4">Test 4:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="vital_signs_4" name="vital_signs_4" size="80" value="{{ old('vital_signs_4')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="vital_signs_5">Test 5:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="vital_signs_5" name="vital_signs_5" size="80" value="{{ old('vital_signs_5')}}">
           </div>
         </div>
         <!-- /row -->
@@ -336,14 +365,65 @@
         <hr>
 
         <div class="row">
-          <div class="col-3">
-            <label for="treatment">Treatment:</label>
-          </div>
-          <div class="col-9">
-            <input type="text" class="form-input" id="treatment" name="treatment" size="80" value="{{ old('treatment')}}">
+          <div class="col-12">
+            TEMPLATE: IV 00 liters | 00:00 AM | IV_Solution | Volume 00
           </div>
         </div>
         <!-- /row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_1">Treatment 1:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_1" name="treatment_1" size="80" value="{{ old('treatment_1')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_2">Treatment 2:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_2" name="treatment_2" size="80" value="{{ old('treatment_2')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_3">Treatment 3:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_3" name="treatment_3" size="80" value="{{ old('treatment_3')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_4">Treatment 4:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_4" name="treatment_4" size="80" value="{{ old('treatment_4')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <div class="row">
+          <div class="col-3">
+            <label for="treatment_5">Treatment 5:</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-input" id="treatment_5" name="treatment_5" size="80" value="{{ old('treatment_5')}}">
+          </div>
+        </div>
+        <!-- /row -->
+
+        <hr>
 
         <div class="row">
           <div class="col-1">

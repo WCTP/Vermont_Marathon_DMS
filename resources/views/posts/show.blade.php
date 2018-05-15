@@ -170,7 +170,7 @@
         <div class="col-2">
           <label for="chief_complaint">Chief Complaint:</label>
         </div>
-        <div class="col-2">
+        <div class="col-10">
           <p class="form-show">{{ $post->chief_complaint }}</p>
         </div>
       </div>
@@ -181,6 +181,15 @@
       <div class="row">
         <div class="col-12">
           <h3 class="form-header">Vital Signs/Labs</h3>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <hr>
+
+      <div class="row">
+        <div class="col-12">
+          TEMPLATE: 00:00 AM | BP 00 | P 00 | RR 00 | Skin 00 | I-stat 00 | Glucose 00 | 02 Sat 00 | Other
         </div>
       </div>
       <!-- /row -->
@@ -217,6 +226,26 @@
       </div>
       <!-- /row -->
 
+      <div class="row">
+        <div class="col-3">
+          <label for="vital_signs_1">Test 4:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->vital_signs_4 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-3">
+          <label for="vital_signs_1">Test 5:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->vital_signs_5 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
       <hr>
 
       <div class="row">
@@ -229,14 +258,65 @@
       <hr>
 
       <div class="row">
-        <div class="col-3">
-          <label for="treatment">Treatment:</label>
-        </div>
-        <div class="col-9">
-          <p class="form-show">{{ $post->treatment }}</p>
+        <div class="col-12">
+          TEMPLATE: IV 00 liters | 00:00 AM | IV_Solution | Volume 00
         </div>
       </div>
       <!-- /row -->
+
+      <hr>
+
+      <div class="row">
+        <div class="col-3">
+          <label for="treatment">Treatment 1:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->treatment_1 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-3">
+          <label for="treatment">Treatment 2:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->treatment_2 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-3">
+          <label for="treatment">Treatment 3:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->treatment_3 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-3">
+          <label for="treatment">Treatment 4:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->treatment_4 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <div class="row">
+        <div class="col-3">
+          <label for="treatment">Treatment 5:</label>
+        </div>
+        <div class="col-9">
+          <p class="form-show">{{ $post->treatment_5 }}</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <hr>
 
       <div class="row">
         <div class="col-1">

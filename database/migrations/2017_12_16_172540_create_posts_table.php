@@ -38,7 +38,13 @@ class CreatePostsTable extends Migration
             $table->text('vital_signs_1')->nullable();
             $table->text('vital_signs_2')->nullable();
             $table->text('vital_signs_3')->nullable();
-            $table->string('treatment')->nullable();
+            $table->text('vital_signs_4')->nullable();
+            $table->text('vital_signs_5')->nullable();
+            $table->string('treatment_1')->nullable();
+            $table->string('treatment_2')->nullable();
+            $table->string('treatment_3')->nullable();
+            $table->string('treatment_4')->nullable();
+            $table->string('treatment_5')->nullable();
             $table->string('diagnosis')->nullable();
             $table->string('disposition')->nullable();
             $table->string('disposition_time')->nullable();
