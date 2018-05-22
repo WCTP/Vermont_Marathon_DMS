@@ -5,10 +5,9 @@
   -->
 
 <!-- Info -->
-<p class="lead">
+<p class="results">
   <a href="/posts/{{ $post->id }}">
     {{ $post->bib_number }}
-  </a>
   | {{ $post->first_name }} {{ $post->last_name}}
   | IN - {{ $post->time_in }}
   @if ($post->time_out == NULL)
@@ -16,6 +15,7 @@
   @else
     | OUT - {{ $post->time_out }}
   @endif
+  </a>
 </p>
 
 <!-- Post Content -->

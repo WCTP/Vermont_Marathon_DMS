@@ -6,13 +6,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Document Management System for Vermont City Marathon">
+    <meta name="author" content="Walter Proulx">
 
     <title>VMDMS</title>
-
-    <!-- Bootstrap core CSS CDN -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Complete JavaScript CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -30,8 +27,7 @@
     <link href="{{ asset('/css/nav.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/home.css') }}" rel="stylesheet">
-
-
+    <link href="{{ asset('/css/auth.css') }}" rel="stylesheet">
 
   </head>
 
@@ -39,9 +35,7 @@
 
     @include ('layouts.nav')
 
-    <br>
-
-    <div class="post-card">
+    <div class="main">
 
       <div class="search-results"></div>
 

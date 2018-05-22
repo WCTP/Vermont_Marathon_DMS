@@ -27,6 +27,8 @@ class HomeController extends Controller
       $keyword = Post::get_keyword();
 
       $results = Post::where('bib_number', 'LIKE', '%' . $keyword . '%')
+        ->orWhere('first_name', 'LIKE', '%' . $keyword . '%')
+        ->orWhere('last_name', 'LIKE', '%' . $keyword . '%')
         ->get()->toArray();
 
       return $results;

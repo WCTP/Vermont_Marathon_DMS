@@ -109,8 +109,6 @@ class PostsController extends Controller
       $user = Auth::user();
       $post->update($request->all());
 
-      $posts = Post::latest()->where("posts.user_id", "=", $user->id)->get();
-
-      return view('admin.index', compact('posts'));
+      return view('posts.show', compact('post'));
     }
 }
