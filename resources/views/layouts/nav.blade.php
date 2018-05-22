@@ -25,7 +25,17 @@
         if (data != null) {
           $(".search-results").append('<h1 class="title">Search Results</h1>');
           data.forEach(function(result) {
-            $(".search-results").append('<p class="results"><a href="/posts/' + result.id + '">' + result.bib_number + ' | ' + result.first_name + ' ' + result.last_name + ' | IN - ' + result.time_in + ' | OUT - ' + result.time_out + '</a></p>');
+            if (result.time_out == null) {
+              $(".search-results").append('<p class="results"><a href="/posts/'
+              + result.id + '">' + result.bib_number + ' | ' + result.first_name
+              + ' ' + result.last_name + ' | IN - ' + result.time_in
+              + ' | OUT - STILL IN TENT</a></p>');
+            } else {
+              $(".search-results").append('<p class="results"><a href="/posts/'
+              + result.id + '">' + result.bib_number + ' | ' + result.first_name
+              + ' ' + result.last_name + ' | IN - ' + result.time_in
+              + ' | OUT - ' + result.time_out + '</a></p>');
+            }
           });
         }
       });
