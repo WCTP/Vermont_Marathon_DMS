@@ -3,6 +3,7 @@
   <h1><a class="navbar-brand" href="/">Vermont Marathon DMS</a></h1>
   <a href="/">Documents</a>
   @if (Auth::check())
+  <a class="nav-link" href="/posts/create">Make Document</a>
   <a class="nav-link" href="/admin">{{ Auth::user()->name }}</a>
   @else
   <a class="nav-link" href="/login">Sign In</a>
