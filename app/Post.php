@@ -40,4 +40,19 @@ class Post extends Model
         ->get()
         ->toArray();
     }
+
+    public static function get_keyword()
+    {
+      /* get current url */
+      $category = url()->current();
+
+      /* find the last / and take the substring end of the url */
+      $last_slash = strripos($category, '/');
+      $category = substr($category, $last_slash + 1);
+
+      /* replace all space (%20) with an actual space */
+      $category = str_replace('%20', ' ', $category);
+      
+      return $category;
+    }
 }

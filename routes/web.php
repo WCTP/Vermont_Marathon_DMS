@@ -11,6 +11,9 @@
 |
 */
 
+/* Search Route */
+Route::get('/search/{keyword}', 'HomeController@search');
+
 /* Home and Resume Routes */
 Route::get('/home', 'HomeController@index');
 Route::get('/resume', 'HomeController@resume');
