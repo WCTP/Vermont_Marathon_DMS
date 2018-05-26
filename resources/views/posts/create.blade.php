@@ -10,6 +10,11 @@
 
       {{ csrf_field() }}
 
+      <div class="post-container">
+        <button type="submit" class="post-show-edit-button">Submit</button>
+      </div>
+
+      <hr>
 
       <div class="post-container">
         <h3 class="form-header">Main Information</h3>
@@ -41,7 +46,7 @@
 
       <div class="post-container">
         <label for="age">Age:</label>
-        <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ old('age')}}" required>
+        <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ old('age')}}">
         <label for="sex">Sex:</label>
         <select id="sex" name="sex" class="form-input">
           <option value="Male">Male</option>
@@ -123,23 +128,44 @@
 
       <div class="post-container">
         <label for="time_in">Time In:</label>
-        <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ old('time_in')}}" required>
+        <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ old('time_in') }}">
         <label for="time_out">Time Out:</label>
-        <input type="time" class="form-input" id="time_out" name="time_out" size="7" maxlength="7" value="{{ old('time_out')}}">
+        <input type="time" class="form-input" id="time_out" name="time_out" size="7" maxlength="7" value="{{ old('time_out') }}">
       </div>
 
       <hr>
 
       <div class="post-container">
         <label for="relevant_medical_history">Relevant Medical History:</label>
-        <input type="text" class="form-input" id="relevant_medical_history" name="relevant_medical_history" size="80" value="{{ old('relevant_medical_history')}}">
+        <textarea id="relevant_medical_history" name="relevant_medical_history">{{ old('relevant_medical_history') }}</textarea>
       </div>
 
       <div class="post-container">
         <label for="allergies">Allergies:</label>
-        <input type="text" class="form-input" id="allergies" name="allergies" size="50" value="{{ old('allergies')}}">
+        <input type="text" class="form-input" id="allergies" name="allergies" size="80" value="{{ old('allergies') }}">
+      </div>
+
+      <div class="post-container">
         <label for="current_meds">Current Meds:</label>
-        <input type="text" class="form-input" id="current_meds" name="current_meds" size="35" value="{{ old('current_meds')}}">
+        <input type="text" class="form-input" id="current_meds" name="current_meds" size="80" value="{{ old('current_meds') }}">
+      </div>
+
+      <hr>
+
+      <div class="post-container">
+        <h3 class="form-header">Family Information</h3>
+      </div>
+
+      <hr>
+
+      <div class="post-container">
+        <label for="current_meds">Emergency Contact Name:</label>
+        <input type="text" class="form-input" id="emergency_contact_name" name="emergency_contact_name" size="30" value="{{ old('emergency_contact_name') }}">
+      </div>
+
+      <div class="post-container">
+        <label for="current_meds">Emergency Contact Phone Number:</label>
+        <input type="text" class="form-input" id="emergency_contact_phone_number" name="emergency_contact_phone_number" size="15" value="{{ old('emergency_contact_phone_number') }}">
       </div>
 
       <hr>
@@ -152,7 +178,7 @@
 
       <div class="post-container">
         <label for="chief_complaint">Chief Complaint:</label>
-        <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ old('chief_complaint')}}" required>
+        <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ old('chief_complaint')}}">
         <datalist id="complaint-info">
           <option value="Fatigue">
           <option value="Chills">
@@ -231,6 +257,11 @@
         <input type="text" class="form-input" id="vital_signs_5" name="vital_signs_5" size="80" value="{{ old('vital_signs_5')}}">
       </div>
 
+      <div class="post-container">
+        <label for="labs">Labs:</label>
+        <textarea id="labs" name="labs">{{ old('labs') }}</textarea>
+      </div>
+
       <hr>
 
       <div class="post-container">
@@ -270,6 +301,11 @@
         <input type="text" class="form-input" id="treatment_5" name="treatment_5" size="80" value="{{ old('treatment_5')}}">
       </div>
 
+      <div class="post-container">
+        <label for="physical_exam">Physical Exam:</label>
+        <textarea id="physical_exam" name="physical_exam">{{ old('physical_exam') }}</textarea>
+      </div>
+
       <hr>
 
       <div class="post-container">
@@ -305,7 +341,7 @@
 
       <div class="post-container">
         <label for="treatment_notes">Treatment Notes:</label>
-        <input type="text" class="form-input" id="treatment_notes" name="treatment_notes" size="80" value="{{ old('treatment_notes')}}">
+        <textarea class="form-input" id="treatment_notes" name="treatment_notes" row="200" cols="20">{{ old('treatment_notes') }}</textarea>
       </div>
 
       <hr>
@@ -318,7 +354,7 @@
 
       <div class="post-container">
         <label for="provider_name">Name:</label>
-        <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ old('provider_name')}}" required>
+        <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ old('provider_name')}}">
         <label for="provider_prefix">Prefix:</label>
         <select id="provider_prefix" name="provider_prefix" class="form-input">
           <option value="MD">MD</option>

@@ -7,6 +7,12 @@
     <hr>
 
     <div class="post-container">
+      <a href="/admin/edit/{{ $post->id }}" class="post-show-edit-button">Edit</a>
+    </div>
+
+    <hr>
+
+    <div class="post-container">
       <h3 class="form-header">Main Information</h3>
     </div>
 
@@ -74,6 +80,24 @@
     <hr>
 
     <div class="post-container">
+      <h3 class="form-header">Family Information</h3>
+    </div>
+
+    <hr>
+
+    <div class="post-container">
+      <label for="current_meds">Emergency Contact Name:</label>
+      <p class="form-show">{{ $post->emergency_contact_name }}</p>
+    </div>
+
+    <div class="post-container">
+      <label for="current_meds">Emergency Contact Phone Number:</label>
+      <p class="form-show">{{ $post->emergency_contact_phone_number }}</p>
+    </div>
+
+    <hr>
+
+    <div class="post-container">
       <h3 class="form-header">Intake Medical Information</h3>
     </div>
 
@@ -109,18 +133,23 @@
     </div>
 
     <div class="post-container">
-      <label for="vital_signs_1">Test 3:</label>
+      <label for="vital_signs_3">Test 3:</label>
       <p class="form-show">{{ $post->vital_signs_3 }}</p>
     </div>
 
     <div class="post-container">
-      <label for="vital_signs_1">Test 4:</label>
+      <label for="vital_signs_4">Test 4:</label>
       <p class="form-show">{{ $post->vital_signs_4 }}</p>
     </div>
 
     <div class="post-container">
-      <label for="vital_signs_1">Test 5:</label>
+      <label for="vital_signs_5">Test 5:</label>
       <p class="form-show">{{ $post->vital_signs_5 }}</p>
+    </div>
+
+    <div class="post-container">
+      <label for="labs">Labs:</label>
+      <p class="form-show">{{ $post->labs }}</p>
     </div>
 
     <hr>
@@ -161,6 +190,12 @@
       <label for="treatment">Treatment 5:</label>
       <p class="form-show">{{ $post->treatment_5 }}</p>
     </div>
+
+    <div class="post-container">
+      <label for="treatment">Physical Exam:</label>
+      <p class="form-show">{{ $post->physical_exam }}</p>
+    </div>
+
 
     <hr>
 

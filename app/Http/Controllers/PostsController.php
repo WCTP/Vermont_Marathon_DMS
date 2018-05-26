@@ -46,21 +46,18 @@ class PostsController extends Controller
         'bib_number' => 'required',
         'location' => 'required',
         'first_name' => 'required',
-        'last_name' => 'required',
-        'age' => 'required',
-        'sex' => 'required',
-        'time_in' => 'required',
-        'chief_complaint' => 'required',
-        'provider_name' => 'required'
+        'last_name' => 'required'
       ]);
 
       auth()->user()->publish(
         new Post(request(['bib_number', 'location', 'first_name', 'middle_name',
           'last_name', 'age', 'sex', 'city', 'state', 'country', 'pt_info',
           'time_in', 'time_out', 'race_chip_collected', 'medal_given',
-          'relevant_medical_history', 'allergies', 'current_meds', 'chief_complaint',
-          'vital_signs_1', 'vital_signs_2', 'vital_signs_3', 'vital_signs_4', 'vital_signs_5',
-          'treatment_1', 'treatment_2', 'treatment_3', 'treatment_4', 'treatment_5', 'diagnosis',
+          'relevant_medical_history', 'allergies', 'current_meds', 'emergency_contact_name',
+          'emergency_contact_phone_number', 'chief_complaint',
+          'vital_signs_1', 'vital_signs_2', 'vital_signs_3', 'vital_signs_4', 'vital_signs_5', 'labs',
+          'treatment_1', 'treatment_2', 'treatment_3', 'treatment_4', 'treatment_5',
+          'diagnosis', 'physical_exam',
           'disposition', 'disposition_time', 'disposition_transportation',
           'family_notification', 'treatment_notes', 'provider_name',
           'provider_prefix', 'provider_signature'
@@ -74,9 +71,7 @@ class PostsController extends Controller
     {
       if (Auth::check()) {
         $user = Auth::user();
-        if ($post->user == $user) {
-          $post->delete();
-        }
+        $post->delete();
       }
 
       return back();
@@ -86,9 +81,7 @@ class PostsController extends Controller
     {
       if (Auth::check()) {
         $user = Auth::user();
-        if ($user == $post->user) {
-          return view('admin.show', compact('post'));
-        }
+        return view('admin.show', compact('post'));
       }
     }
 
@@ -98,12 +91,7 @@ class PostsController extends Controller
         'bib_number' => 'required',
         'location' => 'required',
         'first_name' => 'required',
-        'last_name' => 'required',
-        'age' => 'required',
-        'sex' => 'required',
-        'time_in' => 'required',
-        'chief_complaint' => 'required',
-        'provider_name' => 'required'
+        'last_name' => 'required'
       ]);
 
       $user = Auth::user();

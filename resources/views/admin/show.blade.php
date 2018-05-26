@@ -10,6 +10,11 @@
 
       {{ csrf_field() }}
 
+      <div class="post-container">
+        <button type="submit" class="post-show-edit-button">Submit</button>
+      </div>
+
+      <hr>
 
       <div class="post-container">
         <h3 class="form-header">Main Information</h3>
@@ -19,111 +24,50 @@
 
       <div class="post-container">
         <label for="bib_number">BIB Number:</label>
-        <input type="text" class="form-input" id="bib_number" name="bib_number" size="9" maxlength="9" value="{{ $post->bib_number }}" required>
+        <input type="text" class="form-input" id="bib_number" name="bib_number" size="9" maxlength="9" value="{{ $post->bib_number }}" readonly>
         <label for="location">Location:</label>
-        <select id="location" name="location" class="form-input">
-          <option value="Main Tent">Main Tent</option>
-          <option value="Battery Tent">Battery Tent</option>
-          <option value="Oakledge Tent">Oakledge Tent</option>
-          <option value="Sag Wagon">Sag Wagon</option>
-          <option value="BFD on course">BFD on course</option>
-        </select>
+        <input type="text" class="form-input" id="location" name="location" size="9" maxlength="9" value="{{ $post->location }}" readonly>
       </div>
 
       <div class="post-container">
         <label for="first_name">First Name:</label>
-        <input type="text" class="form-input" id="first_name" name="first_name" size="15" maxlength="15" value="{{ $post->first_name }}" required>
+        <input type="text" class="form-input" id="first_name" name="first_name" size="15" maxlength="85" value="{{ $post->first_name }}" readonly>
         <label for="middle_name">Middle Name:</label>
-        <input type="text" class="form-input" id="middle_name" name="middle_name" size="15" maxlength="15" value="{{ $post->middle_name }}">
+        <input type="text" class="form-input" id="middle_name" name="middle_name" size="15" maxlength="85" value="{{ $post->middle_name }}" readonly>
         <label for="middle_name">Last Name:</label>
-        <input type="text" class="form-input" id="last_name" name="last_name" size="15" maxlength="15" value="{{ $post->last_name }}" required>
+        <input type="text" class="form-input" id="last_name" name="last_name" size="15" maxlength="85" value="{{ $post->last_name }}" readonly>
       </div>
 
       <div class="post-container">
         <label for="age">Age:</label>
-        <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ $post->age }}" required>
+        <input type="text" class="form-input" id="age" name="age" size="3" maxlength="3" value="{{ $post->age }}" readonly>
         <label for="sex">Sex:</label>
-        <select id="sex" name="sex" class="form-input">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
+        <input type="text" class="form-input" id="sex" name="sex" size="3" value="{{ $post->sex }}" readonly>
         <label for="city">City:</label>
-        <input type="text" class="form-input" id="city" name="city" size="15" value="{{ $post->city }}">
+        <input type="text" class="form-input" id="city" name="city" size="15" value="{{ $post->city }}" readonly>
         <label for="state">State:</label>
-        <select id="state" name="state" class="form-input">
-          <option value="AL">AL</option>
-        	<option value="AK">AK</option>
-        	<option value="AR">AR</option>
-        	<option value="AZ">AZ</option>
-        	<option value="CA">CA</option>
-        	<option value="CO">CO</option>
-        	<option value="CT">CT</option>
-        	<option value="DC">DC</option>
-        	<option value="DE">DE</option>
-        	<option value="FL">FL</option>
-        	<option value="GA">GA</option>
-        	<option value="HI">HI</option>
-        	<option value="IA">IA</option>
-        	<option value="ID">ID</option>
-        	<option value="IL">IL</option>
-        	<option value="IN">IN</option>
-        	<option value="KS">KS</option>
-        	<option value="KY">KY</option>
-        	<option value="LA">LA</option>
-        	<option value="MA">MA</option>
-        	<option value="MD">MD</option>
-        	<option value="ME">ME</option>
-        	<option value="MI">MI</option>
-        	<option value="MN">MN</option>
-        	<option value="MO">MO</option>
-        	<option value="MS">MS</option>
-        	<option value="MT">MT</option>
-        	<option value="NC">NC</option>
-        	<option value="NE">NE</option>
-        	<option value="NH">NH</option>
-        	<option value="NJ">NJ</option>
-        	<option value="NM">NM</option>
-        	<option value="NV">NV</option>
-        	<option value="NY">NY</option>
-        	<option value="ND">ND</option>
-        	<option value="OH">OH</option>
-        	<option value="OK">OK</option>
-        	<option value="OR">OR</option>
-        	<option value="PA">PA</option>
-        	<option value="RI">RI</option>
-        	<option value="SC">SC</option>
-        	<option value="SD">SD</option>
-        	<option value="TN">TN</option>
-        	<option value="TX">TX</option>
-        	<option value="UT">UT</option>
-        	<option selected="selected" value="VT">VT</option>
-        	<option value="VA">VA</option>
-        	<option value="WA">WA</option>
-        	<option value="WI">WI</option>
-        	<option value="WV">WV</option>
-        	<option value="WY">WY</option>
-        </select>
+        <input type="text" class="form-input" id="state" name="state" size="15" value="{{ $post->state }}" readonly>
         <label for="country">Country:</label>
-        <input type="text" class="form-input" id="country" name="country" size="15" value="{{ $post->country }}">
+        <input type="text" class="form-input" id="country" name="country" size="15" value="{{ $post->country }}" readonly>
       </div>
 
       <div class="post-container">
         <label for="pt_info">Pt. Info:</label>
-        <input list="info" name="pt_info" id="pt_info" class="form-input" size="15" value="{{ $post->pt_info }}">
+        <input list="info" name="pt_info" id="pt_info" class="form-input" size="15" value="{{ $post->pt_info }}" readonly>
         <datalist id="info">
           <option value="Marathon">
           <option value="Relay">
           <option value="Volunteer">
         </datalist>
         <label for="race_chip_collected">Race Chip Collected:</label>
-        <input type="checkbox" class="form-input" id="race_chip_collected" name="race_chip_collected" value="1">
+        <input type="text" size="1" class="form-input" id="race_chip_collected" name="race_chip_collected" value="{{ $post->race_chip_collected }}" readonly>
         <label for="medal_given">Medal Given:</label>
-        <input type="checkbox" class="form-input" id="medal_given" name="medal_given" value="1">
+        <input type="text" size="1" class="form-input" id="medal_given" name="medal_given" value="{{ $post->medal_given }}" readonly>
       </div>
 
       <div class="post-container">
         <label for="time_in">Time In:</label>
-        <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ $post->time_in }}" required>
+        <input type="time" class="form-input" id="time_in" name="time_in" size="7" maxlength="7" value="{{ $post->time_in }}">
         <label for="time_out">Time Out:</label>
         <input type="time" class="form-input" id="time_out" name="time_out" size="7" maxlength="7" value="{{ $post->time_out }}">
       </div>
@@ -132,14 +76,35 @@
 
       <div class="post-container">
         <label for="relevant_medical_history">Relevant Medical History:</label>
-        <input type="text" class="form-input" id="relevant_medical_history" name="relevant_medical_history" size="80" value="{{ $post->relevant_medical_history }}">
+        <textarea id="relevant_medical_history" name="relevant_medical_history">{{ $post->relevant_medical_history }}</textarea>
       </div>
 
       <div class="post-container">
         <label for="allergies">Allergies:</label>
-        <input type="text" class="form-input" id="allergies" name="allergies" size="50" value="{{ $post->allergies }}">
+        <input type="text" class="form-input" id="allergies" name="allergies" size="80" value="{{ $post->allergies }}">
+      </div>
+
+      <div class="post-container">
         <label for="current_meds">Current Meds:</label>
-        <input type="text" class="form-input" id="current_meds" name="current_meds" size="35" value="{{ $post->current_meds }}">
+        <input type="text" class="form-input" id="current_meds" name="current_meds" size="80" value="{{ $post->current_meds }}">
+      </div>
+
+      <hr>
+
+      <div class="post-container">
+        <h3 class="form-header">Family Information</h3>
+      </div>
+
+      <hr>
+
+      <div class="post-container">
+        <label for="current_meds">Emergency Contact Name:</label>
+        <input type="text" class="form-input" id="emergency_contact_name" name="emergency_contact_name" size="30" value="{{ $post->emergency_contact_name }}">
+      </div>
+
+      <div class="post-container">
+        <label for="current_meds">Emergency Contact Phone Number:</label>
+        <input type="text" class="form-input" id="emergency_contact_phone_number" name="emergency_contact_phone_number" size="15" value="{{ $post->emergency_contact_phone_number }}">
       </div>
 
       <hr>
@@ -152,7 +117,7 @@
 
       <div class="post-container">
         <label for="chief_complaint">Chief Complaint:</label>
-        <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ $post->chief_complaint }}" required>
+        <input list="complaint-info" name="chief_complaint" id="chief_complaint" class="form-input" size="80" value="{{ $post->chief_complaint }}">
         <datalist id="complaint-info">
           <option value="Fatigue">
           <option value="Chills">
@@ -231,6 +196,11 @@
         <input type="text" class="form-input" id="vital_signs_5" name="vital_signs_5" size="80" value="{{ $post->vital_signs_5 }}">
       </div>
 
+      <div class="post-container">
+        <label for="labs">Labs:</label>
+        <textarea id="labs" name="labs">{{ $post->labs }}</textarea>
+      </div>
+
       <hr>
 
       <div class="post-container">
@@ -270,6 +240,11 @@
         <input type="text" class="form-input" id="treatment_5" name="treatment_5" size="80" value="{{ $post->treatment_5 }}">
       </div>
 
+      <div class="post-container">
+        <label for="physical_exam">Physical Exam:</label>
+        <textarea id="physical_exam" name="physical_exam">{{ $post->physical_exam }}</textarea>
+      </div>
+
       <hr>
 
       <div class="post-container">
@@ -305,7 +280,7 @@
 
       <div class="post-container">
         <label for="treatment_notes">Treatment Notes:</label>
-        <input type="text" class="form-input" id="treatment_notes" name="treatment_notes" size="80" value="{{ $post->treatment_notes }}">
+        <textarea class="form-input" id="treatment_notes" name="treatment_notes" row="200" cols="20">{{ $post->treatment_notes }}</textarea>
       </div>
 
       <hr>
@@ -318,7 +293,7 @@
 
       <div class="post-container">
         <label for="provider_name">Name:</label>
-        <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ $post->provider_name }}" required>
+        <input type="text" class="form-input" id="provider_name" name="provider_name" size="15" maxlength="15" value="{{ $post->provider_name }}">
         <label for="provider_prefix">Prefix:</label>
         <select id="provider_prefix" name="provider_prefix" class="form-input">
           <option value="MD">MD</option>
