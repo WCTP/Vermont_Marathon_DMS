@@ -1,16 +1,16 @@
 <!-- Navigation -->
-<div class="sidenav">
-  <h1><a class="navbar-brand" href="/">Vermont Marathon DMS</a></h1>
-  <a href="/">Documents</a>
+<div class="top-nav">
+  <a href="/">DOCUMENTS</a>
   @if (Auth::check())
-  <a class="nav-link" href="/posts/create">Make Document</a>
+  <a class="nav-link" href="/posts/create">NEW ENTRY</a>
   <a class="nav-link" href="/admin">{{ Auth::user()->name }}</a>
   @else
-  <a class="nav-link" href="/login">Sign In</a>
+  <a class="nav-link" href="/login">SIGN IN</a>
   @endif
-  <div class="search">
+  <a class="nav-link">Search</a>
+  <!--<div class="search">
     <input type="text" name="search" id="search-box" size="12" placeholder="Search...">
-  </div>
+  </div>-->
 </div>
 
 <script type="text/javascript">

@@ -1,53 +1,100 @@
 @import master.sass
 
+.results
+  font-size: 1.2em
+
+  a
+    color: white
+    background-color: rgba(50, 50, 50, 0.4)
+    border-radius: 2px
+    display: block
+    font-size: 1.2em
+    margin-left: 5px
+    margin-right: 5px
+    padding: 5px
+    text-decoration: none
+    transition: 0.2s
+
+  a:hover
+    background-color: rgba(50, 50, 50, 0.6)
+    color: yellow
+    transition: 0.2s
+
 .post-container
   display: flex
-  align-items: center
-  justify-content: space-evenly
-
-  input
-    margin-top: 5px
-    margin-bottom: 5px
-
-  textarea
-    width: 70%
-    height: 50px
-
-.post-title
-  display: block
-  text-align: center
-
-.post-card
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
-  background-color: $background-grey
-
-.form-input
-  color: #F00
-  text-align: left
-
-.form-header
-  text-align: left
-
-.form-show
-  color: #F00
-
-.post-show-edit-button
-  color: $white
-  background-color: #484afd
-  border: none
-  border-radius: 4px
-  padding: 5px
-  padding-left: 20px
-  padding-right: 20px
+  justify-content: space-around
+  font-size: 1.2em
   margin: 5px
-  text-decoration: none
+  width: 100%
 
-.post-show-edit-button:hover
-  transition: background-color 0.5s ease
-  background-color: #0440dd
-  color: $white
-  text-decoration: none
+  a
+    color: white
+    display: block
+    font-size: 1.2em
+    background-color: red
+    padding: 10px
+    width: 90%
+    border-radius: 3px
+    text-align: center
+    text-decoration: none
+    margin-left: auto
+    margin-right: auto
 
-label
-  display: block
-  text-align: right
+  h3
+    border-top: 1px solid black
+    border-bottom: 1px solid black
+    display: block
+    margin: 0px
+    margin-top: 10px
+    margin-bottom: 10px
+    text-align: center
+    padding-top: 5px
+    padding-bottom: 5px
+    width: 100%
+
+  input, select, textarea
+    background-color: rgba(50, 50, 50, 0.4)
+    border: none
+    color: white
+    font-size: 1.2em
+    padding: 5px
+    margin-left: 5px
+    margin-right: 5px
+    width: 100%
+
+  label
+    background-color: rgba(50, 50, 50, 0.4)
+    color: #ddd
+    margin-left: 5px
+    margin-right: 5px
+    padding: 5px
+    text-align: center
+
+  input[type=checkbox]
+    text-align: center
+    height: 30px
+    width: 30px
+
+  input::placeholder, textarea::placeholder
+    color: #ddd
+
+  button
+    border: none
+    color: white
+    display: block
+    font-size: 1.2em
+    background-color: red
+    padding: 10px
+    width: 90%
+    border-radius: 3px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+
+  p
+    background-color: rgba(50, 50, 50, 0.4)
+    color: white
+    font-size: 1.2em
+    margin: 0px
+    padding: 5px
+    width: 100%

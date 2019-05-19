@@ -33,11 +33,13 @@
 
   <body>
 
+    <a class="website-header" href="/"><img src="{{ URL::asset('/images/VCM_logo.png') }}"></image>Vermont Marathon DMS</a>
+
     @include ('layouts.nav')
 
     <div class="main">
 
-      <div class="search-results"></div>
+      <!-- <div class="search-results"></div> -->
 
       @yield('content')
 

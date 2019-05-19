@@ -4,19 +4,13 @@
     <!-- Title -->
     <h1>&nbsp&nbsp Keybank Vermont City Marathon Medical Record</h1>
 
-    <hr>
-
     <div class="post-container">
       <a href="/admin/edit/{{ $post->id }}" class="post-show-edit-button">Edit</a>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Main Information</h3>
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="bib_number">BIB Number:</label>
@@ -63,8 +57,6 @@
       <p class="form-show">{{ $post->time_out }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <label for="relevant_medical_history">Relevant Medical History:</label>
       <p class="form-show">{{ $post->relevant_medical_history }}</p>
@@ -77,13 +69,9 @@
       <p class="form-show">{{ $post->current_meds }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Family Information</h3>
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="current_meds">Emergency Contact Name:</label>
@@ -95,32 +83,22 @@
       <p class="form-show">{{ $post->emergency_contact_phone_number }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Intake Medical Information</h3>
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="chief_complaint">Chief Complaint:</label>
       <p class="form-show">{{ $post->chief_complaint }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Vital Signs/Labs</h3>
     </div>
 
-    <hr>
-
     <div class="post-container">
           TEMPLATE: 00:00 AM | BP 00 | P 00 | RR 00 | Skin 00 | I-stat 00 | Glucose 00 | 02 Sat 00 | Other
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="vital_signs_1">Test 1:</label>
@@ -152,19 +130,13 @@
       <p class="form-show">{{ $post->labs }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Treatment</h3>
     </div>
 
-    <hr>
-
     <div class="post-container">
       TEMPLATE: IV 00 liters | 00:00 AM | IV_Solution | Volume 00
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="treatment">Treatment 1:</label>
@@ -196,9 +168,6 @@
       <p class="form-show">{{ $post->physical_exam }}</p>
     </div>
 
-
-    <hr>
-
     <div class="post-container">
       <label for="diagnosis">Diagnosis:</label>
       <p class="form-show">{{ $post->diagnosis }}</p>
@@ -220,13 +189,9 @@
       <p class="form-show">{{ $post->treatment_notes }}</p>
     </div>
 
-    <hr>
-
     <div class="post-container">
       <h3 class="form-header">Provider</h3>
     </div>
-
-    <hr>
 
     <div class="post-container">
       <label for="provider_name">Name:</label>
@@ -236,8 +201,6 @@
       <label for="provider_signature">Signature:</label>
       <p class="form-show">{{ $post->provider_signature }}</p>
     </div>
-
-    <hr>
 
     <div class="post-container">
       <a href="/admin/edit/{{ $post->id }}" class="post-show-edit-button">Edit</a>

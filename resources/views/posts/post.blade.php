@@ -9,10 +9,10 @@
   <a href="/posts/{{ $post->id }}">
     {{ $post->bib_number }}
   | {{ $post->first_name }} {{ $post->last_name}}
+  @if ($post->time_in != NULL)
   | IN - {{ $post->time_in }}
-  @if ($post->time_out == NULL)
-    | STILL IN TENT
-  @else
+  @endif
+  @if ($post->time_out != NULL)
     | OUT - {{ $post->time_out }}
   @endif
   </a>

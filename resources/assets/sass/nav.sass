@@ -1,41 +1,33 @@
 @import master.sass
 
-.sidenav
-  height: 100%
-  width: 20vw
-  position: fixed
-  z-index: 1
-  top: 0
-  left: 0
-  background-color: $canvas-grey
-  overflow-x: hidden
-  padding-top: 10px
-  padding-left: 5px
-  box-shadow: 5px 0px 2px black
+.top-nav
+  background-color: rgba(255, 20, 20, 0.6)
+  border-bottom: 2px rgb(255, 90, 0) solid
+  display: flex
+  justify-content: space-around
+  left: 0px
+  padding-left: 190px
+  position: sticky
+  top: 0px
+  z-index: 0
 
   a
-    color: $code-red
+    color: #fff
     padding: 6px
     text-decoration: none
     font-size: 1.5em
     display: block
+    margin-top: auto
+    margin-bottom: auto
 
   a:hover
-    color: $code-yellow
+    color: #094ba4
     transition: 0.5s
 
-  h1
-    font-size: 2em
-
-    a
-      text-decoration: none
-      color: $code-cyan
-
   input
+    background-color: #fff
     border: none
-    background-color: $code-lime
     color: black
+    display: block
     font-size: 1.5em
-    padding-left: 5px
-    margin-left: 5px
-    margin-top: 10px
+    margin-top: auto
