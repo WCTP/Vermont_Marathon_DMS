@@ -10,13 +10,11 @@
     {{ csrf_field() }}
 
     <div class="auth-container">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" required>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
     </div>
 
     <div class="auth-container">
-      <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" name="password" required>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
     </div>
 
     <div class="auth-container">

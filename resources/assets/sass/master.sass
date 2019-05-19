@@ -41,14 +41,110 @@ $code-yellow: #ffff00
     z-index: 5
     position: absolute
 
+.site-cover
+  background-color: rgba(50, 50, 50, 0.4)
+  display: none
+  height: 100%
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 50
+
+  .search-container
+    background-color: rgba(25, 25, 25, 0.8)
+    margin-left: 14.5%
+    margin-top: 180px
+    padding-top: 20px
+    padding-bottom: 20px
+    width: 75%
+
+    input
+      background-color: rgba(200, 20, 20, 0.7)
+      border: none
+      color: white
+      font-size: 2em
+      text-align: center
+      margin-left: 5%
+      margin-right: 5%
+      margin-bottom: 20px
+      width: 90%
+
+    input::placeholder
+      color: #ccc
+
+    a
+      background-color: rgba(20, 150, 200, 0.4)
+      border-radius: 2px
+      color: white
+      display: block
+      font-size: 1.2em
+      margin-left: 5%
+      margin-right: 5%
+      padding: 5px
+      text-decoration: none
+      transition: 0.2s
+
+    a:hover
+      color: yellow
+      transition: 0.5s
+
 .main
   background-color: rgba(255, 255, 255, 0.6)
   margin-left: 5%
   margin-right: 5%
   margin-top: 30px
+  height: calc(100vh - 256px)
+  overflow: scroll
   padding: 20px
+
+  @media only screen and (max-width: 750px)
+    max-height: calc(100vh - 346px)
+
+  @media only screen and (max-width: 493px)
+    max-height: calc(100vh - 400px)
 
   .title
     border-bottom: 2px solid black
     display: block
     font-size: 2em
+
+.footer
+  background-color: rgba(50,50,50,0.4)
+  color: white
+  display: block
+  text-align: center
+
+.auth-container
+
+  input
+    background-color: rgba(50, 50, 50, 0.4)
+    border: none
+    color: white
+    font-size: 1.2em
+    padding: 5px
+    margin-left: 5px
+    margin-right: 5px
+    margin-bottom: 5px
+    width: 100%
+
+  button
+    border: none
+    color: white
+    display: block
+    font-size: 1.2em
+    background-color: red
+    padding: 10px
+    width: 90%
+    border-radius: 3px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+
+.admin-option
+  li
+    color: white
+    display: block
+    font-size: 1.2em
+
+      a
+        text-decoration: none

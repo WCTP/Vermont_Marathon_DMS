@@ -7,9 +7,13 @@
   justify-content: space-around
   left: 0px
   padding-left: 190px
+  padding-right: 10px
   position: sticky
   top: 0px
   z-index: 0
+
+  @media only screen and (max-width: 669px)
+    padding-left: 10px
 
   a
     color: #fff
@@ -21,6 +25,19 @@
     margin-bottom: auto
 
   a:hover
+    color: #094ba4
+    transition: 0.5s
+
+  button
+    background-color: rgba(255, 255, 255, 0)
+    border: none
+    color: #fff
+    cursor: pointer
+    font-size: 1.5em
+    display: block
+    transition: 0.5s
+
+  button:hover
     color: #094ba4
     transition: 0.5s
 
