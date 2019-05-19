@@ -66,12 +66,16 @@
             if (data != null) {
               $(".search-results").append('');
               data.forEach(function(result) {
-                if (result.time_out == null) {
+                if (result.time_in == null) {
+                  $(".search-results").append('<p class="results"><a href="/posts/'
+                  + result.id + '">' + result.bib_number + ' | ' + result.first_name
+                  + ' ' + result.last_name + ' | NOT IN TENT</a></p>');
+                } else if (result.time_in != null & result.time_out == null) {
                   $(".search-results").append('<p class="results"><a href="/posts/'
                   + result.id + '">' + result.bib_number + ' | ' + result.first_name
                   + ' ' + result.last_name + ' | IN - ' + result.time_in
-                  + ' | OUT - STILL IN TENT</a></p>');
-                } else {
+                  + ' | STILL IN TENT</a></p>');
+                } else if (result.time_in != null & result.time_out != null) {
                   $(".search-results").append('<p class="results"><a href="/posts/'
                   + result.id + '">' + result.bib_number + ' | ' + result.first_name
                   + ' ' + result.last_name + ' | IN - ' + result.time_in
@@ -85,6 +89,7 @@
 
       $("#search-button").on("click", function() {
         $(".site-cover").show();
+        $("#search-box").focus();
       });
 
       $(".site-cover").on("click", function(obj) {
