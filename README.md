@@ -102,3 +102,9 @@ Purpose: everything is working, let us doublecheck!
 - Open the XAMPP control panel and click Admin on the MySQL line. This should open up phpMyAdmin. This is a Graphical User Interface (GUI) that allows you to see the database you made in step five. If you click on 'reimagined' you should now see a bunch of tables listed. This is where our information will be stored.
 
 - Next open up a web browser and type in 127.0.0.1. Now you should see the main page of our program! If you do, you are all set to test and code!
+
+* Assignments:
+    * Look at the CSS of the medical form. How can we make this look better/more readable? Here are some resources to help you compile SASS and learn the syntax: https://scout-app.io/ for compiling and https://sass-lang.com/documentation/syntax.
+    * This application has little security implemented. Find vulnerabilities and either submit a report or code to fix the vulnerabilities! (For example, how could you submit data that is a different data type than expected?)
+    * Finish the admin control panel. What might you want a user to be able to control? Should we have any prvilege hierarchy so only the admin has specific access to specific data?
+    * Redesign the front page displaying all documents. What other information could we display that would be important for us to know during the marathon?
